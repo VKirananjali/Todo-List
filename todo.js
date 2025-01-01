@@ -1,4 +1,5 @@
 let tasks=[];
+document.addEventListener("keydown", pressKey);
 renderTodo();
 function addEvent(){
 
@@ -7,6 +8,12 @@ function addEvent(){
   tasks.push({task:work,date:date });
   
   renderTodo();
+}
+
+function pressKey(event){
+  if(event.key==="Enter"){
+    addEvent(); 
+  }
 }
 
 function renderTodo(){
